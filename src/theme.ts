@@ -1,6 +1,6 @@
 // src/theme.ts
 
-import { extendTheme } from '@chakra-ui/react'
+import { extendTheme } from "@chakra-ui/react";
 
 const theme = extendTheme({
   colors: {
@@ -9,7 +9,7 @@ const theme = extendTheme({
       aloe: "#c2d1bb",
       babyBlue: "#c7e6e8",
       pink: "#f1dfd5",
-      clay: "#d5baa1"
+      clay: "#d5baa1",
     },
   },
   fonts: {
@@ -19,40 +19,40 @@ const theme = extendTheme({
   styles: {
     global: {
       body: {
-        bg: 'white',
-        color: 'brand.navy',
+        bg: "white",
+        color: "brand.navy",
       },
     },
   },
   components: {
     Button: {
       baseStyle: {
-        fontWeight: 'bold',
+        fontWeight: "bold",
       },
       variants: {
         solid: {
-          bg: 'brand.blue',
-          color: 'white',
+          bg: "brand.blue",
+          color: "white",
           _hover: {
-            bg: 'brand.lightBlue',
+            bg: "brand.lightBlue",
           },
         },
         outline: {
-          borderColor: 'brand.pink',
-          color: 'brand.navy',
+          borderColor: "brand.pink",
+          color: "brand.navy",
           _hover: {
-            bg: 'brand.pink',
-            color: 'white',
+            bg: "brand.pink",
+            color: "white",
           },
         },
       },
     },
     Heading: {
       baseStyle: {
-        color: 'brand.navy',
+        color: "brand.navy",
       },
     },
   },
-})
+});
 
-export default theme
+export default theme;

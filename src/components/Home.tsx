@@ -1,24 +1,29 @@
-import React from 'react';
-import { 
-  Box, 
+import {
+  Box,
   Flex,
   Text,
   Container,
   Heading,
   Image,
-  VStack
-} from '@chakra-ui/react';
+  VStack,
+} from "@chakra-ui/react";
 
 interface timeLineProps {
-  date: string
-  title: string
-  description: string
-  imageUrl: string
-  isImageLeft: boolean
+  date: string;
+  title: string;
+  description: string;
+  imageUrl: string;
+  isImageLeft: boolean;
 }
 
-const TimelineItem = ({ date, title, description, imageUrl, isImageLeft } : timeLineProps) => {
-  console.log(` test ${isImageLeft}`)
+const TimelineItem = ({
+  date,
+  title,
+  description,
+  imageUrl,
+  isImageLeft,
+}: timeLineProps) => {
+  console.log(` test ${isImageLeft}`);
   const textContent = (
     <Box flex={1} p={6}>
       <Text fontSize="sm" color="brand.clay" fontWeight="bold">
@@ -34,20 +39,14 @@ const TimelineItem = ({ date, title, description, imageUrl, isImageLeft } : time
   );
 
   const imageContent = (
-    <Box 
+    <Box
       flex={1}
       h="300px"
       position="relative"
       overflow="hidden"
       borderRadius="md"
     >
-      <Image
-        src={imageUrl}
-        alt={title}
-        objectFit="cover"
-        w="100%"
-        h="100%"
-      />
+      <Image src={imageUrl} alt={title} objectFit="cover" w="100%" h="100%" />
     </Box>
   );
 
@@ -62,7 +61,7 @@ const TimelineItem = ({ date, title, description, imageUrl, isImageLeft } : time
         width="2px"
         bg="gray.600"
         transform="translateX(-50%)"
-        display={{ base: 'none', lg: 'block' }}
+        display={{ base: "none", lg: "block" }}
       />
 
       {/* Circle connector */}
@@ -78,11 +77,11 @@ const TimelineItem = ({ date, title, description, imageUrl, isImageLeft } : time
         border="2px solid"
         borderColor="gray.600"
         zIndex={1}
-        display={{ base: 'none', lg: 'block' }}
+        display={{ base: "none", lg: "block" }}
       />
 
-      <Flex 
-        mb={16} 
+      <Flex
+        mb={16}
         gap={8}
         align="center"
         w="full"
@@ -96,31 +95,34 @@ const TimelineItem = ({ date, title, description, imageUrl, isImageLeft } : time
   );
 };
 
-
 const Home = () => {
   const timelineData = [
     {
       date: "5e Januari 2014",
       title: "Haff",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       imageUrl: "https://picsum.photos/seed/1/600/400", // Using Lorem Picsum for demo images
     },
     {
       date: "February 20xx",
       title: "Mer Haff",
-      description: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      description:
+        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       imageUrl: "https://picsum.photos/seed/2/600/400",
     },
     {
       date: "September 2023",
       title: "Sjukt mycket haff",
-      description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+      description:
+        "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
       imageUrl: "https://picsum.photos/seed/3/600/400",
     },
     {
       date: "Maj 2025",
       title: "Bröllop",
-      description: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
+      description:
+        "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
       imageUrl: "https://picsum.photos/seed/4/600/400",
     },
   ];
@@ -130,21 +132,21 @@ const Home = () => {
       <Heading fontSize="2xl" mb={12} color="brand.aloe" textAlign="center">
         Mya & Markus Bröllop - Vår resa
       </Heading>
-      
+
       <Box
         maxH="80vh"
         overflowY="auto"
         px={{ base: 2, lg: 4 }}
         css={{
-          '&::-webkit-scrollbar': {
-            width: '4px',
+          "&::-webkit-scrollbar": {
+            width: "4px",
           },
-          '&::-webkit-scrollbar-track': {
-            width: '6px',
+          "&::-webkit-scrollbar-track": {
+            width: "6px",
           },
-          '&::-webkit-scrollbar-thumb': {
-            background: 'gray.300',
-            borderRadius: '24px',
+          "&::-webkit-scrollbar-thumb": {
+            background: "gray.300",
+            borderRadius: "24px",
           },
         }}
       >
