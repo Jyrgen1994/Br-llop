@@ -106,20 +106,20 @@ const Home = () => {
       imageUrl: "https://picsum.photos/seed/1/600/400", // Using Lorem Picsum for demo images
     },
     {
-      date: "February 2024",
-      title: "First Milestone",
+      date: "February 20xx",
+      title: "Mer Haff",
       description: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       imageUrl: "https://picsum.photos/seed/2/600/400",
     },
     {
-      date: "March 2024",
-      title: "Feature Update",
+      date: "September 2023",
+      title: "Sjukt mycket haff",
       description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
       imageUrl: "https://picsum.photos/seed/3/600/400",
     },
     {
-      date: "April 2024",
-      title: "Team Expansion",
+      date: "Maj 2025",
+      title: "Bröllop",
       description: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
       imageUrl: "https://picsum.photos/seed/4/600/400",
     },

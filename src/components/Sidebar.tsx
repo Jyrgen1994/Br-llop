@@ -1,7 +1,7 @@
 // App.tsx
 
 import React, { ReactText } from 'react';
-import { Box, BoxProps, Flex, useDisclosure, FlexProps, Icon, Drawer, DrawerContent, IconButton} from '@chakra-ui/react';
+import { Box, BoxProps, Flex, useDisclosure, FlexProps, Icon, Drawer, DrawerContent, IconButton, Text} from '@chakra-ui/react';
 import {
   FiHome,
   FiChevronsLeft,
@@ -9,7 +9,6 @@ import {
   FiMenu,
   FiMapPin,
   FiAnchor,
-  FiZap, 
 } from 'react-icons/fi'
 import { IconType } from 'react-icons';
 import { NavLink } from 'react-router-dom';
@@ -23,7 +22,6 @@ const LinkItems: Array<LinkItemProps> = [
   { name: 'Hem', icon: FiHome, to: '/' },
   { name: 'Vart', icon: FiMapPin, to: '/vart' },
   { name: 'Resa', icon: FiAnchor, to: '/resa' },
-  { name: 'Boende', icon: FiHome, to: '/boende' },
 ]
 
 interface NavItemProps extends FlexProps {
@@ -86,7 +84,9 @@ const SidebarContent = ({toggleSidebar, isOpen, ...rest }: SideBarProps) => {
       >
         <Flex h="20" alignItems={"center"} justifyContent={"space-between"} px={isOpen ? "8" : "4"}>
           {isOpen ? (
-            <Icon as={FiZap} fontSize="24px" />
+            <Text fontSize="xl" fontWeight="bold" mt={2}>
+              Svartsö bröllop
+            </Text>
           ) : (
             <Icon as={FiMenu} fontSize="24px" />
           )}

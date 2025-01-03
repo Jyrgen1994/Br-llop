@@ -26,7 +26,6 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/vart" element={<Vart />} />
             <Route path="/resa" element={<Resa />} />
-            <Route path="/boende" element={<Boende />} />
           </Routes>
         </Box>
     </Flex>
