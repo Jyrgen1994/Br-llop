@@ -1,10 +1,11 @@
 import { Box, Flex } from "@chakra-ui/react";
-import SimpleSidebar from "./components/Sidebar";
+import SimpleSidebar from "./components/Navbar";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
 import Vart from "./components/Vart";
 import Resa from "./components/Resa";
 import { useState } from "react";
+import Navbar from "./components/Navbar";
 
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
@@ -12,10 +13,7 @@ function App() {
   return (
     <Router>
       <Flex bg={"brand.sage"} minHeight="100vh" width="100vw">
-        <SimpleSidebar
-          isSidebarOpen={isSidebarOpen}
-          setIsSidebarOpen={setIsSidebarOpen}
-        />
+        <Navbar />
         <Box
           flex={1}
           ml={{ base: 0, md: isSidebarOpen ? "300px" : "150px" }}
