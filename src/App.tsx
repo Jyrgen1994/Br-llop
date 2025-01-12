@@ -1,5 +1,4 @@
 import { Box, Flex } from "@chakra-ui/react";
-import SimpleSidebar from "./components/Navbar";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
 import Vart from "./components/Vart";
@@ -8,7 +7,7 @@ import { useState } from "react";
 import Navbar from "./components/Navbar";
 
 function App() {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+  const [isSidebarOpen] = useState(true);
 
   return (
     <Router>
