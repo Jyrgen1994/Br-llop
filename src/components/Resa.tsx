@@ -43,17 +43,17 @@ const Resa = () => {
               href={`${baseUrl}&outboundDate=${dateObj.date}`}
               isExternal
               _hover={{ textDecoration: "none" }}
-              border={"1px solid"}
-              borderColor={"brand.clay"}
               borderRadius={"25px"}
               width={"25%"}
               minW={"fit-content"}
             >
               <Button
                 width="100%"
-                colorScheme="blue"
                 size="lg"
-                textColor={"brand.aloe"}
+                textColor={"brand.sage"}
+                backgroundColor={"brand.clay"}
+                borderColor={"brand.babyBlue"}
+                borderRadius={"25px"}
               >
                 Båtschema för{" "}
                 {dateObj.label.replace("May", "Maj").replace("June", "Juni")}

@@ -1,6 +1,6 @@
 import { Flex, Heading, Text } from "@chakra-ui/react";
 
-const Boende = () => {
+const Rsvp = () => {
   return (
     <Flex flex={1} p={5} flexDirection="column">
       <Heading fontSize="xl" mb={4}>
@@ -11,4 +11,4 @@ const Boende = () => {
   );
 };
 
-export default Boende;
+export default Rsvp;

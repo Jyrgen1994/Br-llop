@@ -11,6 +11,7 @@ import {
   HStack,
 } from "@chakra-ui/react";
 import { FiAnchor, FiHome, FiMapPin, FiMenu } from "react-icons/fi";
+import { MdReply } from "react-icons/md";
 import { NavLink } from "react-router-dom";
 import { IconType } from "react-icons";
 
@@ -24,6 +25,7 @@ const LinkItems: Array<LinkItemProps> = [
   { name: "Hem", icon: FiHome, to: "/" },
   { name: "Vart", icon: FiMapPin, to: "/vart" },
   { name: "Resa", icon: FiAnchor, to: "/resa" },
+  { name: "Rsvp", icon: MdReply, to: "/rvsp" },
 ];
 
 const NavItem = ({ name, to }: { name: string; to: string }) => {

@@ -5,6 +5,7 @@ import Vart from "./components/Vart";
 import Resa from "./components/Resa";
 import { useState } from "react";
 import Navbar from "./components/Navbar";
+import Rsvp from "./components/RSVP";
 
 function App() {
   const [isSidebarOpen] = useState(true);
@@ -22,6 +23,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/vart" element={<Vart />} />
             <Route path="/resa" element={<Resa />} />
+            <Route path="/rsvp" element={<Rsvp />} />
           </Routes>
         </Box>
       </Flex>
