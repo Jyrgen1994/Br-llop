@@ -6,7 +6,7 @@ const Fonts = () => (
     styles={`
       @font-face {
         font-family: 'Adelio Darmanto';
-        src: url('/src/assets/fonts/AdelioDarmanto.otf') format('opentype');
+        src: url('/assets/fonts/AdelioDarmanto.otf') format('opentype');
         font-weight: normal;
         font-style: normal;
       }

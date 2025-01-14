@@ -108,7 +108,7 @@ const Timeline = () => {
       title: "Gösta",
       description:
         "Vi hämtar hem vår lilla gösta",
-      imageUrl: "/src/assets/soet.jpg",
+      imageUrl: "/assets/images/soet.jpg",
     },
     {
       date: "September 2023",

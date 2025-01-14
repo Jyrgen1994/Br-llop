@@ -3,7 +3,7 @@ import { Box, Text } from "@chakra-ui/react";
 const Home = () => {
   return (
     <Box
-      bgImage="url('/src/assets/soet.jpg')"
+      bgImage="url('/assets/images/soet.jpg')"
       bgSize="cover"
       bgPosition="center"
       position="absolute"
