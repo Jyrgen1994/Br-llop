@@ -1,13 +1,29 @@
-import { Flex, Heading, Text } from "@chakra-ui/react";
+import { Box,  Text } from "@chakra-ui/react";
 
 const Rsvp = () => {
   return (
-    <Flex flex={1} p={5} flexDirection="column">
-      <Heading fontSize="xl" mb={4}>
-        Boende
-      </Heading>
-      <Text>Boende page details go here, filling the available space.</Text>
-    </Flex>
+    <Box
+      bgSize="cover"
+      bgPosition="center"
+      position="absolute"
+      top={0}
+      left={0}
+      right={0}
+      bottom={0}
+      display="flex"
+      alignItems="center"
+      justifyContent="center"
+    >
+      <Text 
+        fontSize="9xl" 
+        color="white" 
+        fontWeight="bold" 
+        textAlign="center" 
+        fontFamily="adelio"
+      >
+        Coming soon...
+      </Text>
+    </Box>
   );
 };
 

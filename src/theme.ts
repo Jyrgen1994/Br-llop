@@ -15,6 +15,7 @@ const theme = extendTheme({
   fonts: {
     heading: '"Playfair Display", serif',
     body: '"Open Sans", sans-serif',
+    adelio: '"Adelio Darmanto", cursive',
   },
   styles: {
     global: {

@@ -1,4 +1,4 @@
-import { Flex, Heading, Button, VStack, Link } from "@chakra-ui/react";
+import { Flex, Button, VStack, Link, Text } from "@chakra-ui/react";
 
 const Resa = () => {
   const baseUrl =
@@ -12,56 +12,38 @@ const Resa = () => {
 
   return (
     <Flex
-      direction="column"
-      minH="100vh" // Set minimum height to viewport height
-      p={5}
+      flex="1"
+      alignItems="center" // Center items vertically
+      justifyContent="center" // Center items horizontally
+      alignContent={"center"}
     >
-      <Heading
-        mb={4}
-        textAlign={"center"}
-        fontSize="2xl"
-        textColor={"brand.aloe"}
-        sx={{
-          position: "sticky",
-          top: 0,
-          zIndex: 100,
-        }}
-      >
-        Resa
-      </Heading>
-
-      <Flex
-        flex="1"
-        alignItems="center" // Center items vertically
-        justifyContent="center" // Center items horizontally
-        alignContent={"center"}
-      >
-        <VStack spacing={4} align="center" width="100%">
-          {dates.map((dateObj, index) => (
-            <Link
-              key={index}
-              href={`${baseUrl}&outboundDate=${dateObj.date}`}
-              isExternal
-              _hover={{ textDecoration: "none" }}
+      <VStack spacing={4} align="center" width="100%">
+        {dates.map((dateObj, index) => (
+          <Link
+            key={index}
+            href={`${baseUrl}&outboundDate=${dateObj.date}`}
+            isExternal
+            _hover={{ textDecoration: "none" }}
+            borderRadius={"25px"}
+            width={"25%"}
+            minW={"fit-content"}
+          >
+            <Button
+              width="100%"
+              size="lg"
+              textColor={"gray.800"}
+              backgroundColor={"brand.clay"}
+              borderColor={"brand.babyBlue"}
               borderRadius={"25px"}
-              width={"25%"}
-              minW={"fit-content"}
             >
-              <Button
-                width="100%"
-                size="lg"
-                textColor={"brand.sage"}
-                backgroundColor={"brand.clay"}
-                borderColor={"brand.babyBlue"}
-                borderRadius={"25px"}
-              >
+              <Text fontSize="2xl" fontFamily={"adelio"}>
                 Båtschema för{" "}
                 {dateObj.label.replace("May", "Maj").replace("June", "Juni")}
-              </Button>
-            </Link>
-          ))}
-        </VStack>
-      </Flex>
+              </Text>
+            </Button>
+          </Link>
+        ))}
+      </VStack>
     </Flex>
   );
 };
