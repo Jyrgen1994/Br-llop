@@ -14,7 +14,7 @@ const Header = () => {
     <Box bg="white" w="full" p={4} boxShadow="md">
       <Flex direction="column" align="center">
         <Text 
-        fontSize={["4xl", "6xl", "9xl"]}
+        fontSize={["4xl", "5xl", "7xl"]}
         fontWeight="bold" 
         fontFamily="adelio"
         userSelect="none" // prevents text selection
