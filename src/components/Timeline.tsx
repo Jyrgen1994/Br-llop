@@ -97,10 +97,10 @@ const TimelineItem = ({
 const Timeline = () => {
   const timelineData = [
     {
-      date: "Januari 2014",
+      date: "Januari 2015",
       title: "Vi blir tillsammans",
       description:
-        "Vi blev officiellt tillsammans den 5e Januari 2014!",
+        "Vi blev officiellt tillsammans den 5e Januari 2015!",
       imageUrl: "https://picsum.photos/seed/1/600/400", // Using Lorem Picsum for demo images
     },
     {

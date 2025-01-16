@@ -16,7 +16,7 @@ const Home = () => {
       justifyContent="center"
     >
       <Text 
-        fontSize="9xl" 
+        fontSize={["4xl", "6xl", "9xl"]} 
         color="white" 
         fontWeight="bold" 
         textAlign="center" 

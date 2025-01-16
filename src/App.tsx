@@ -15,10 +15,15 @@ function App() {
         bg="gray.800" 
         minHeight="100vh" 
         width="100vw"
-        overflow="hidden" // Prevents any potential scrolling issues
+        maxWidth="100%" // Ensure content doesn't overflow
+        overflow="hidden"
       >
         <Header />
-        <Flex flex={1} position="relative"> {/* Changed Box to Flex and added position="relative" */}
+        <Flex 
+          flex={1} 
+          position="relative"
+          direction="column" // Added for better mobile layout
+        > 
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/tidslinje" element={<Timeline />} /> 
