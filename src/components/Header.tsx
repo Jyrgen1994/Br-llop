@@ -18,6 +18,7 @@ const Header = () => {
         fontWeight="bold" 
         fontFamily="adelio"
         userSelect="none" // prevents text selection
+        color="brand.navy"
         >
         Markus & Mya
         </Text>
