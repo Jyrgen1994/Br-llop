@@ -19,6 +19,15 @@ const Header = () => {
         fontFamily="adelio"
         userSelect="none" // prevents text selection
         color="brand.navy"
+        display="block" // Ensure block display
+        width="100%" // Full width
+        textAlign={"center"}
+        sx={{
+          WebkitTextFillColor: "black", // Force text color on webkit
+          textRendering: "optimizeLegibility", // Improve text rendering
+          WebkitFontSmoothing: "antialiased", // Better font smoothing
+          MozOsxFontSmoothing: "grayscale"
+        }}
         >
         Markus & Mya
         </Text>
