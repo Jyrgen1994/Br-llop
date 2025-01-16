@@ -55,7 +55,7 @@ const Header = () => {
             <NavLink key={link.name} to={link.to} style={{ textDecoration: "none" }}>
               {({ isActive }) => (
                 <Text
-                  fontSize="3xl"
+                  fontSize={["2xl", "3xl", "4xl"]}
                   fontFamily={"adelio"}
                   color={isActive ? "brand.clay" : "gray.600"}
                   _hover={{ color: "brand.clay" }}

@@ -28,10 +28,10 @@ const TimelineItem = ({
       <Text fontSize="2xl" color="brand.clay" fontWeight="bold" fontFamily={"adelio"}>
         {date}
       </Text>
-      <Text fontSize="5xl" color="brand.aloe" fontWeight="bold" fontFamily={"adelio"} mt={2}>
+      <Text fontSize={["2xl", "3xl", "4xl"]} color="brand.aloe" fontWeight="bold" fontFamily={"adelio"} mt={2}>
         {title}
       </Text>
-      <Text fontSize="3xl" mt={4} color="brand.aloe" fontFamily={"adelio"} >
+      <Text fontSize={["xl", "2xl", "3xl"]} mt={4} color="brand.aloe" fontFamily={"adelio"} >
         {description}
       </Text>
     </Box>
