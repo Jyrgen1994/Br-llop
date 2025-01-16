@@ -18,15 +18,10 @@ const Header = () => {
         fontWeight="bold" 
         fontFamily="adelio"
         userSelect="none" // prevents text selection
-        color="brand.navy"
+        bg={"transparent"}
         display="block" // Ensure block display
         width="100%" // Full width
         textAlign={"center"}
-        sx={{
-          textRendering: "optimizeLegibility", // Improve text rendering
-          WebkitFontSmoothing: "antialiased", // Better font smoothing
-          MozOsxFontSmoothing: "grayscale"
-        }}
         >
         Markus & Mya
         </Text>
