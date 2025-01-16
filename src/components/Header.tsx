@@ -23,7 +23,7 @@ const Header = () => {
         width="100%" // Full width
         textAlign={"center"}
         sx={{
-          WebkitTextFillColor: "black", // Force text color on webkit
+          WebkitTextFillColor: "brand.navy", // Force text color on webkit
           textRendering: "optimizeLegibility", // Improve text rendering
           WebkitFontSmoothing: "antialiased", // Better font smoothing
           MozOsxFontSmoothing: "grayscale"
