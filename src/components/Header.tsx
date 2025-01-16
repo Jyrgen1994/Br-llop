@@ -18,10 +18,7 @@ const Header = () => {
         fontWeight="bold" 
         fontFamily="adelio"
         userSelect="none" // prevents text selection
-        bg={"transparent"}
-        display="block" // Ensure block display
-        width="100%" // Full width
-        textAlign={"center"}
+        color="brand.navy"
         >
         Markus & Mya
         </Text>
