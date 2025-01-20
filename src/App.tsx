@@ -6,6 +6,7 @@ import Resa from "./components/Resa";
 import Rsvp from "./components/RSVP";
 import Header from "./components/Header";
 import Timeline from "./components/Timeline";
+import Authentication from "./components/Authentication";
 
 function App() {
   return (
@@ -29,7 +30,7 @@ function App() {
             <Route path="/tidslinje" element={<Timeline />} /> 
             <Route path="/karta" element={<Karta />} />
             <Route path="/resa" element={<Resa />} />
-            <Route path="/rsvp" element={<Rsvp />} />
+            <Route path="/rsvp" element={<Authentication />} />
           </Routes>
         </Flex>
       </Flex>
