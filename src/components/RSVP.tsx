@@ -9,9 +9,6 @@ import {
   VStack,
   Checkbox,
   Text,
-  Radio,
-  RadioGroup,
-  Stack,
   useToast,
   HStack,
 } from "@chakra-ui/react";
@@ -99,16 +96,20 @@ const Rsvp = () => {
   const dietRestrictions = ["Vegetarian", "Vegan", "Glutenfri", "Latkosfri", "Allergier", "Annat"]
   const freeTextFields = ["Email", "Telefon"]
 
-  const [errors, setErrors] = useState<fieldErrorType>({})
+  const [errors, setErrors] = useState<fieldErrorType>({
+    Namn: "",
+    Email: "",
+    Telefon: ""
+  })
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } : {name: string, value: string} = e.target;
     setFormData((prev) => ({
       ...prev,
       [name]: value,
     }));
     // Clear error when user starts typing
-    if (errors[name]) {
+    if (errors[name as keyof fieldErrorType]) {
       setErrors((prev) => ({
         ...prev,
         [name]: "",
@@ -129,7 +130,6 @@ const Rsvp = () => {
           }), {})
         }
       };
-      console.log(requestBody)
       const response = await fetch(`${url}/api/email/send`, {
         method: 'POST',
         headers: {
@@ -142,8 +142,8 @@ const Rsvp = () => {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
   
-      const data = await response.json();
-      console.log('Success:', data);
+      //const data = await response.json();
+      //console.log('Success:', data);
       return true;
     } catch (error) {
       console.error('Error:', error);
@@ -179,7 +179,7 @@ const Rsvp = () => {
         }
       }
     }
-    console.log(newErrors)
+    //console.log(newErrors)
     setErrors(newErrors);
     return !Object.values(newErrors).some(error => error !== "");
   };
@@ -193,7 +193,7 @@ const Rsvp = () => {
     }));
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
 
     if (!validateForm()) return;
@@ -201,7 +201,7 @@ const Rsvp = () => {
     try {
       // Replace with your actual API call
       await sendToMailApi(formData);
-      console.log(formData)
+      //console.log(formData)
       toast({
         title: "Svar skickat! ✉️",
         description: "Tack för att ni svarade! 🐶",
@@ -231,7 +231,7 @@ const Rsvp = () => {
     <Box maxW="md" mx="auto" mt={8} p={6} borderWidth={1} borderRadius="lg" color={"brand.clay"}>
       <form>
         <VStack spacing={4}>
-            <FormControl key={"Namn"} isInvalid={errors.Namn}>
+            <FormControl key={"Namn"} isInvalid={!!errors.Namn}>
                    <FormLabel
                    textAlign="left"
                    fontWeight="bold" 
@@ -312,7 +312,7 @@ const Rsvp = () => {
           {isAttending && (
             <>
               {freeTextFields.map((freeTexField: string) => (
-                  <FormControl key={freeTexField} isInvalid={errors[freeTexField]}>
+                  <FormControl key={freeTexField} isInvalid={!!errors[freeTexField as keyof fieldErrorType]}>
                    <FormLabel
                    textAlign="left"
                    fontWeight="bold" 
@@ -324,10 +324,10 @@ const Rsvp = () => {
                    </FormLabel>
                    <Input
                      name={freeTexField}
-                     value={formData[freeTexField as keyof formDataType]}
+                     value={String(formData[freeTexField as keyof formDataType] || '')}
                      onChange={handleInputChange}
                    />
-                   <FormErrorMessage>{errors[freeTexField]}</FormErrorMessage>
+                   <FormErrorMessage>{errors[freeTexField as keyof fieldErrorType]}</FormErrorMessage>
                  </FormControl>
               ))}
               <FormControl>

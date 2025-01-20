@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
 import Karta from "./components/Karta";
 import Resa from "./components/Resa";
-import Rsvp from "./components/RSVP";
 import Header from "./components/Header";
 import Timeline from "./components/Timeline";
 import Authentication from "./components/Authentication";
