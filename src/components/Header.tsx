@@ -52,7 +52,7 @@ const Header = () => {
         variant="solid"
       />
     </HStack>
-        <HStack spacing={8} mt={4}>
+        <HStack spacing={4} mt={4}>
           {LinkItems.map((link) => (
             <NavLink key={link.name} to={link.to} style={{ textDecoration: "none" }}>
               {({ isActive }) => (
