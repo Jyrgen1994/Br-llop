@@ -34,11 +34,12 @@ const NavItem = ({ name, to }: { name: string; to: string }) => {
     <NavLink to={to} style={{ textDecoration: "none" }}>
       {({ isActive }) => (
         <Box
-          px={4}
-          py={2}
+          px={1}
+          py={1}
           borderRadius="md"
           bg={isActive ? "brand.clay" : "transparent"}
           color={isActive ? "black" : "inherit"}
+          fontSize={{ base: "xs", sm: "sm", md: "md" }}
           _hover={{
             bg: "brand.clay",
             color: "black",
