@@ -215,11 +215,15 @@ const ModalBodyContent = ({ content }: { content: string }) => {
         left={0}
         right={0}
         bottom={0}
-        display="flex"
-        alignItems="center"
-        justifyContent="center"
+        overflowX="hidden" // Prevent horizontal scroll
       >
-        <VStack spacing={8} w="full" maxW="1200px" p={4}>
+          <VStack 
+            spacing={8} 
+            w="full"
+            maxW="1200px" 
+            mx="auto" // Center content
+            p={{ base: 4, md: 8 }} // Responsive padding
+          >
           {/* Main Info Card */}
           <Card w="full" bg="brand.aloe" boxShadow="xl">
             <CardBody>
@@ -237,11 +241,9 @@ const ModalBodyContent = ({ content }: { content: string }) => {
             {cards.map((card, index) => (
               <Card 
                 key={index}
-                w="300px"
                 cursor="pointer"
                 bg="brand.aloe"
                 height="100%"  // This ensures full height
-                flex="1 1 300px" // This helps with flexible sizing while maintaining width
                 onClick={() => handleCardClick(card)}
                 _hover={{ transform: 'translateY(-5px)', transition: 'transform 0.2s' }}
               >
@@ -260,7 +262,7 @@ const ModalBodyContent = ({ content }: { content: string }) => {
             {cardsRowTwo.map((card, index) => (
               <Card 
                 key={index}
-                w="300px"
+                
                 cursor="pointer"
                 bg="brand.aloe"
                 onClick={() => handleCardClick(card)}
