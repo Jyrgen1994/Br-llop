@@ -23,6 +23,7 @@ interface LinkItemProps {
 
 const LinkItems: Array<LinkItemProps> = [
   { name: "Hem", icon: FiHome, to: "/" },
+  { name: "Info", icon: FiMapPin, to: "/info" },
   { name: "Vart", icon: FiMapPin, to: "/vart" },
   { name: "Resa", icon: FiAnchor, to: "/resa" },
   { name: "Rsvp", icon: MdReply, to: "/rvsp" },

@@ -3,10 +3,11 @@ import { NavLink } from "react-router-dom";
 
 const LinkItems = [
   { name: "Hem", to: "/" },
+  { name: "Info", to: "/info" },
   { name: "Vår Resa", to: "/tidslinje" },
   { name: "Karta", to: "/karta" },
   { name: "Båtresor", to: "/resa" },
-  { name: "RSVP", to: "/rsvp" },
+  { name: "OSA", to: "/rsvp" },
 ];
 
 const Header = () => {

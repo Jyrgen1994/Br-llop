@@ -97,17 +97,31 @@ const TimelineItem = ({
 const Timeline = () => {
   const timelineData = [
     {
-      date: "Januari 2015",
-      title: "Vi blir tillsammans",
+      date: "Augusti 2011",
+      title: "Historiens början",
       description:
-        "Vi blev officiellt tillsammans den 5e Januari 2015!",
+        "Vi träffades för första gången på franska lektionen i första ring på gymnasiet. Tillsammans blev vi inte förräns efter gymnasiet den 5e Januari 2015 för att vara exakt.",
       imageUrl: "https://picsum.photos/seed/1/600/400", // Using Lorem Picsum for demo images
     },
     {
-      date: "Mars 2020",
+      date: "",
+      title: "Första dejten",
+      description:
+        "Träningspass såklart!",
+      imageUrl: "/assets/images/soet.jpg",
+    },
+    {
+      date: "",
+      title: "Första gemensamma boendet",
+      description:
+        "En studentlägenhet på 24kvm i Flemingsberg!",
+      imageUrl: "https://picsum.photos/seed/3/600/400",
+    },
+    {
+      date: "Mars 2021",
       title: "Gösta",
       description:
-        "Vi hämtar hem vår lilla gösta",
+        "Vi skaffar vår lilla Gösta!",
       imageUrl: "/assets/images/soet.jpg",
     },
     {
@@ -115,14 +129,14 @@ const Timeline = () => {
       title: "Förlovning",
       description:
         "Vi förlovar oss!",
-      imageUrl: "https://picsum.photos/seed/3/600/400",
+      imageUrl: "/assets/images/soet.jpg",
     },
     {
       date: "Maj 2025",
       title: "Bröllop",
       description:
-        "Vi giter oss!",
-      imageUrl: "https://picsum.photos/seed/4/600/400",
+        "Vi gifter oss! Kul att du kunde komma!",
+      imageUrl: "/assets/images/soet.jpg",
     },
   ];
 

@@ -3,7 +3,7 @@ import { Box, Text } from "@chakra-ui/react";
 const Home = () => {
   return (
     <Box
-      bgImage="url('/assets/images/soet.jpg')"
+      bgImage="url('/assets/images/costa_1.JPG')"
       bgSize="cover"
       bgPosition="center"
       position="absolute"
@@ -21,6 +21,7 @@ const Home = () => {
         fontWeight="bold" 
         textAlign="center" 
         fontFamily="adelio"
+        transform="translateY(-80%)"
       >
         Vi ska gifta oss!
       </Text>

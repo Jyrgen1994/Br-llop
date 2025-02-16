@@ -6,6 +6,7 @@ import Resa from "./components/Resa";
 import Header from "./components/Header";
 import Timeline from "./components/Timeline";
 import Authentication from "./components/Authentication";
+import Info from "./components/Info";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         > 
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/info" element={<Info />} />
             <Route path="/tidslinje" element={<Timeline />} /> 
             <Route path="/karta" element={<Karta />} />
             <Route path="/resa" element={<Resa />} />
