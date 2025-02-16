@@ -158,7 +158,7 @@ const ModalBodyContent = ({ content }: { content: string }) => {
                   <ListItem
                     key={itemIndex}
                     fontSize={{ base: "sm", md: "md" }}
-                    color="brand.navy"
+                    color="gray.600"
                   >
                     <Text as="span" fontWeight="bold">
                       {item.text}
@@ -169,7 +169,7 @@ const ModalBodyContent = ({ content }: { content: string }) => {
                           <ListItem
                             key={subIndex}
                             fontSize={{ base: "sm", md: "md" }}
-                            color="brand.navy"
+                            color="gray.600"
                           >
                             {subItem}
                           </ListItem>
@@ -186,7 +186,7 @@ const ModalBodyContent = ({ content }: { content: string }) => {
           <Text
             key={index}
             whiteSpace="pre-line"
-            color="brand.navy"
+            color="gray.600"
             fontSize={{ base: "sm", md: "md" }}
           >
             {section.content}
@@ -227,7 +227,7 @@ const ModalBodyContent = ({ content }: { content: string }) => {
           {/* Main Info Card */}
           <Card w="full" bg="brand.aloe" boxShadow="xl">
             <CardBody>
-              <Heading fontFamily="adelio" color="brand.navy" size="lg">Allmänt om bröllopet</Heading>
+              <Heading fontFamily="adelio" color="gray.600" size="lg">Allmänt om bröllopet</Heading>
               <Text mt={4} whiteSpace="pre-line">
                 Vigseln kommer att äga rum 13:00 på lördagen den 31 Maj. <br />
                 Vi har abonnerat Svartsö Vandrarhem fredag till söndag, vilket innebär att man kan stanna över delar av, eller hela helgen och hänga om man vill det.<br />
@@ -248,7 +248,7 @@ const ModalBodyContent = ({ content }: { content: string }) => {
                 _hover={{ transform: 'translateY(-5px)', transition: 'transform 0.2s' }}
               >
                 <CardBody flex="1">
-                  <Heading fontFamily={"adelio"} fontSize={"lg"} color="brand.navy" size="md">{card.title}</Heading>
+                  <Heading fontFamily={"adelio"} fontSize={"lg"} color="gray.600" size="md">{card.title}</Heading>
                   <Text
                   _hover={{ color: "brand.clay" }}
                 >
@@ -269,7 +269,7 @@ const ModalBodyContent = ({ content }: { content: string }) => {
                 _hover={{ transform: 'translateY(-5px)', transition: 'transform 0.2s' }}
               >
                 <CardBody>
-                  <Heading fontFamily={"adelio"} fontSize={"lg"} color="brand.navy" size="md">{card.title}</Heading>
+                  <Heading fontFamily={"adelio"} fontSize={"lg"} color="gray.600" size="md">{card.title}</Heading>
                   <Text
                   _hover={{ color: "brand.clay" }}
                 >
@@ -294,7 +294,7 @@ const ModalBodyContent = ({ content }: { content: string }) => {
           >
             <ModalHeader 
               fontFamily="adelio" 
-              color="brand.navy"
+              color="gray.600"
             >
               {selectedCard?.title}
             </ModalHeader>
@@ -314,7 +314,7 @@ const ModalBodyContent = ({ content }: { content: string }) => {
                         <AccordionIcon />
                       </AccordionButton>
                     </h2>
-                    <AccordionPanel pb={4} color={"brand.navy"}>
+                    <AccordionPanel pb={4} color={"gray.600"}>
                       <Schedule events={fridaySchedule} />
                     </AccordionPanel>
                   </AccordionItem>
@@ -328,7 +328,7 @@ const ModalBodyContent = ({ content }: { content: string }) => {
                         <AccordionIcon />
                       </AccordionButton>
                     </h2>
-                    <AccordionPanel pb={4} color={"brand.navy"}>
+                    <AccordionPanel pb={4} color={"gray.600"}>
                       <Schedule events={saturdaySchedule} />
                     </AccordionPanel>
                   </AccordionItem>
@@ -342,7 +342,7 @@ const ModalBodyContent = ({ content }: { content: string }) => {
                         <AccordionIcon />
                       </AccordionButton>
                     </h2>
-                    <AccordionPanel pb={4} color={"brand.navy"}>
+                    <AccordionPanel pb={4} color={"gray.600"}>
                       <Schedule events={sundaySchedule} />
                     </AccordionPanel>
                   </AccordionItem>

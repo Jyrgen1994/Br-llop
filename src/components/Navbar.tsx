@@ -85,7 +85,7 @@ export default function Navbar() {
     <Box>
       <Flex
         bg="brand.aloe"
-        px={4}
+        px={1}
         h={16}
         position="fixed"
         w="full"
