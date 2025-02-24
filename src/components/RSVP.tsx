@@ -393,8 +393,8 @@ const Rsvp = () => {
           </FormControl>
           {isStayingOverNight &&
             <HStack spacing={4} mt={4}>
-              <DayBox formData={formData} setFormData={setFormData} day="Fredag" />
-              <DayBox formData={formData} setFormData={setFormData} day="Lördag" />
+              <DayBox formData={formData} setFormData={setFormData} day="Fre-Lör" />
+              <DayBox formData={formData} setFormData={setFormData} day="Lör-Sön" />
             </HStack>
           }
             </>
