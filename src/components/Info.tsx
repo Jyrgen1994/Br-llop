@@ -45,9 +45,15 @@ import Schedule from "./Schedule";
   
     const cards = [
       {
-        title: "Svartsö",
-        summary: "Info om Svartsö",
-        details: "Kommer snart... 🔜"
+        title: "Allmänt om bröllopet",
+        summary: "Generell info",
+        details: `
+        Vigseln kommer att äga rum 13:00 på lördagen den 31 Maj.
+
+        Vi har abonnerat Svartsö Vandrarhem fredag till söndag, vilket innebär att man kan stanna över delar av, eller hela helgen och hänga om man vill det.
+        
+        Det går självklart bra att bara komma över dagen också!
+        `
       },
       {
         title: "Boende",
@@ -86,7 +92,25 @@ import Schedule from "./Schedule";
                   ** Kitchen aid
                   ** Fina vaser/skålar
                   ** Upplägningsfat`
-                      },
+        },
+        {
+          title: "Svartsö",
+          summary: "Info om Svartsö",
+          details: "Kommer snart... 🔜"
+        },
+        {
+          title: "Klädkod",
+          summary: "Info om Klädkod",
+          details: `
+          Dina finaste sommarkläder!
+
+          Tänk ljust och färglatt!
+
+          Tänk klädkod kavaj, fast fritt och ledigt!
+          `
+        },
+
+                    
     ];
   
 
@@ -224,18 +248,6 @@ const ModalBodyContent = ({ content }: { content: string }) => {
             mx="auto" // Center content
             p={{ base: 4, md: 8 }} // Responsive padding
           >
-          {/* Main Info Card */}
-          <Card w="full" bg="brand.aloe" boxShadow="xl">
-            <CardBody>
-              <Heading fontFamily="adelio" color="gray.600" size="lg">Allmänt om bröllopet</Heading>
-              <Text mt={4} whiteSpace="pre-line">
-                Vigseln kommer att äga rum 13:00 på lördagen den 31 Maj. <br />
-                Vi har abonnerat Svartsö Vandrarhem fredag till söndag, vilket innebär att man kan stanna över delar av, eller hela helgen och hänga om man vill det.<br />
-                Det går självklart bra att bara komma över dagen också!<br />
-              </Text>
-            </CardBody>
-          </Card>
-  
           {/* Clickable Cards */}
           <HStack justifyContent="center" spacing={4} w="full" overflowX="auto" p={2}>
             {cards.map((card, index) => (
@@ -251,6 +263,7 @@ const ModalBodyContent = ({ content }: { content: string }) => {
                   <Heading fontFamily={"adelio"} fontSize={"lg"} color="gray.600" size="md">{card.title}</Heading>
                   <Text
                   _hover={{ color: "brand.clay" }}
+                  textColor={"gray.600"}
                 >
                   {card.summary}
                 </Text>
@@ -272,6 +285,7 @@ const ModalBodyContent = ({ content }: { content: string }) => {
                   <Heading fontFamily={"adelio"} fontSize={"lg"} color="gray.600" size="md">{card.title}</Heading>
                   <Text
                   _hover={{ color: "brand.clay" }}
+                  textColor={"gray.600"}
                 >
                   {card.summary}
                 </Text>

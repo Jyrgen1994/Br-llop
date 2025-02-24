@@ -36,10 +36,10 @@ const Schedule: React.FC<ScheduleProps> = ({ events }) => (
           
           {/* Content */}
           <Box ml={4}>
-            <Text fontWeight="bold" color="brand.navy">
+            <Text fontWeight="bold" color="gray.600">
               {event.time}
             </Text>
-            <Text color="brand.navy">
+            <Text color="gray.600">
               {event.description}
             </Text>
           </Box>
