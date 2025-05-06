@@ -40,3 +40,19 @@
 .read-the-docs {
   color: #888;
 }
+
+/* In your global CSS file */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* For smoother transitions between sections */
+.section-transition {
+  transition: opacity 0.8s ease-in-out;
+}
+
+.content-transition {
+  transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}

@@ -1,4 +1,5 @@
-import { Flex } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
+import { useEffect, useState } from "react";
 
 interface GenerateMapUrlProps {
   lat: number;
@@ -17,29 +18,52 @@ const Karta = () => {
     lng: 18.677500879954522,
     zoom: 14,
   });
+  
+  // Get the header height
+  const [headerHeight, setHeaderHeight] = useState("0px");
+  
+  useEffect(() => {
+    const updateHeaderHeight = () => {
+      const headerElement = document.querySelector('header');
+      if (headerElement) {
+        const height = `${headerElement.offsetHeight}px`;
+        setHeaderHeight(height);
+      }
+    };
+    
+    // Initial measurement
+    updateHeaderHeight();
+    
+    // Update on resize
+    window.addEventListener('resize', updateHeaderHeight);
+    return () => {
+      window.removeEventListener('resize', updateHeaderHeight);
+    };
+  }, []);
 
   return (
-    <Flex 
-      position="absolute"
-      top={0}
+    <Box
+      position="fixed"
+      top={headerHeight} // Use dynamic header height instead of fixed 60px
       left={0}
       right={0}
       bottom={0}
       p={5}
+      zIndex={0}
     >
       <iframe
         title="Google map test"
         width="100%"
         height="100%"
-        style={{ 
+        style={{
           border: 0,
-          borderRadius: '8px', // Optional: adds rounded corners
-          boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' // Optional: adds subtle shadow
+          borderRadius: '8px',
+          boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)'
         }}
         src={mapUrl}
         allowFullScreen
       />
-    </Flex>
+    </Box>
   );
 };
 
